@@ -22,11 +22,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 class ContentLoadConfigListener
 {
     public function __construct(
-        private readonly ScopeMatcher $scopeMatcher,
         private readonly RequestStack $requestStack,
-        private readonly Connection $connection,
-        private readonly ContainerInterface $container,
-        private readonly ContaoFramework $framework,
     ) {
     }
 

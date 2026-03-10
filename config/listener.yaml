@@ -7,11 +7,8 @@ services:
         class: ContaoGarage\GlobalElements\EventListener\ArticleLoadConfigListener
         public: true;
         arguments:
-            - '@contao.routing.scope_matcher'
             - '@request_stack'
             - '@database_connection'
-            - '@service_container'
-            - '@contao.framework'
             - '@translator'
         tags:
             - { name: contao.callback, table: tl_article, target: config.onload, method: onLoadConfig }
@@ -21,10 +18,7 @@ services:
         class: ContaoGarage\GlobalElements\EventListener\ArticleListOperationListener
         public: true;
         arguments:
-            - '@contao.routing.scope_matcher'
             - '@request_stack'
-            - '@translator'
-            - '@service_container'
         tags:
             - { name: contao.callback, table: tl_article, target: list.operations.edit.button, method: disableButton }
             - { name: contao.callback, table: tl_article, target: list.operations.copy.button, method: disableButton }
@@ -37,11 +31,7 @@ services:
         class: ContaoGarage\GlobalElements\EventListener\ContentLoadConfigListener
         public: true;
         arguments:
-            - '@contao.routing.scope_matcher'
             - '@request_stack'
-            - '@database_connection'
-            - '@service_container'
-            - '@contao.framework'
         tags:
             - { name: contao.callback, table: tl_content, target: config.onload, method: onLoadConfig, priority: 100 }
 
@@ -49,10 +39,8 @@ services:
         class: ContaoGarage\GlobalElements\EventListener\ContentListOperationListener
         public: true;
         arguments:
-            - '@contao.routing.scope_matcher'
             - '@request_stack'
             - '@translator'
-            - '@service_container'
         tags:
             - { name: contao.callback, table: tl_content, target: list.operations.edit.button, method: disableEditButton }
             - { name: contao.callback, table: tl_content, target: list.operations.delete.button, method: disableDeleteButton, priority: 10 }
@@ -64,7 +52,6 @@ services:
         arguments:
             - '@contao.routing.scope_matcher'
             - '@request_stack'
-            - '@service_container'
         tags:
             - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
 
@@ -74,7 +61,6 @@ services:
         arguments:
             - '@contao.routing.scope_matcher'
             - '@request_stack'
-            - '@service_container'
         tags:
             - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
 

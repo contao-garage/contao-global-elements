@@ -22,7 +22,6 @@ class KernelRequestListener
     public function __construct(
         private readonly ScopeMatcher $scopeMatcher,
         private readonly RequestStack $requestStack,
-        private readonly ContainerInterface $container,
     ) {
     }
 

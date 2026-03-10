@@ -21,10 +21,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class ArticleListOperationListener
 {
     public function __construct(
-        private readonly ScopeMatcher $scopeMatcher,
         private readonly RequestStack $requestStack,
-        private readonly TranslatorInterface $translator,
-        private readonly ContainerInterface $container,
     ) {
     }
 

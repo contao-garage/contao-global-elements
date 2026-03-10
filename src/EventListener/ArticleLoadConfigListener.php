@@ -25,11 +25,8 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class ArticleLoadConfigListener
 {
     public function __construct(
-        private readonly ScopeMatcher $scopeMatcher,
         private readonly RequestStack $requestStack,
         private readonly Connection $connection,
-        private readonly ContainerInterface $container,
-        private readonly ContaoFramework $framework,
         private readonly TranslatorInterface $translator,
     ) {
     }
