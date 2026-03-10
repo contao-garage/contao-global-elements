@@ -12,11 +12,7 @@ declare(strict_types=1);
 
 namespace ContaoGarage\GlobalElements\EventListener;
 
-use Contao\CoreBundle\Framework\ContaoFramework;
-use Contao\CoreBundle\Routing\ScopeMatcher;
 use Contao\DataContainer;
-use Doctrine\DBAL\Connection;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class ContentLoadConfigListener
@@ -42,7 +38,7 @@ class ContentLoadConfigListener
                 $GLOBALS['TL_DCA']['tl_content']['list']['operations']['copy'],
                 $GLOBALS['TL_DCA']['tl_content']['list']['operations']['cut'],
                 $GLOBALS['TL_DCA']['tl_content']['list']['operations']['toggle'],
-                $GLOBALS['TL_DCA']['tl_content']['list']['operations']['show']
+                $GLOBALS['TL_DCA']['tl_content']['list']['operations']['show'],
             );
         }
     }

@@ -12,13 +12,10 @@ declare(strict_types=1);
 
 namespace ContaoGarage\GlobalElements\EventListener;
 
-use Contao\CoreBundle\Framework\ContaoFramework;
-use Contao\CoreBundle\Routing\ScopeMatcher;
 use Contao\DataContainer;
 use Contao\Message;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Exception as DoctrineException;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
