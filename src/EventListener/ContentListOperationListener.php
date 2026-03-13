@@ -6,7 +6,7 @@ declare(strict_types=1);
  * This file is part of contao-garage/contao-global-elements.
  *
  * @author    Martin Schumann <martin.schumann@ontao-garage.de>
- * @license   LGPL-3.0-or-later
+ * @license   MIT
  * @copyright Contao Garage 2026
  */
 

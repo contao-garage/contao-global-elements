@@ -10,7 +10,7 @@ $header = <<<EOF
 This file is part of contao-garage/contao-global-elements.
 
 @author    Martin Schumann <martin.schumann@ontao-garage.de>
-@license   LGPL-3.0-or-later
+@license   MIT
 @copyright Contao Garage %s
 EOF;
 $header = sprintf($header, date('Y'));
