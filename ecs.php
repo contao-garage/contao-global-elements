@@ -3,16 +3,16 @@
 declare(strict_types=1);
 
 use Contao\EasyCodingStandard\Set\SetList;
-use PhpCsFixer\Fixer\Comment\HeaderCommentFixer;
-use PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer;
-use Symplify\EasyCodingStandard\Config\ECSConfig;
-use PhpCsFixer\Fixer\ReturnNotation\NoUselessReturnFixer;
 use PhpCsFixer\Fixer\ArrayNotation\NoWhitespaceBeforeCommaInArrayFixer;
+use PhpCsFixer\Fixer\Comment\HeaderCommentFixer;
+use PhpCsFixer\Fixer\Operator\ConcatSpaceFixer;
+use PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer;
 use PhpCsFixer\Fixer\Phpdoc\PhpdocAddMissingParamAnnotationFixer;
 use PhpCsFixer\Fixer\Phpdoc\PhpdocOrderFixer;
-use PhpCsFixer\Fixer\Whitespace\BlankLineBeforeStatementFixer;
+use PhpCsFixer\Fixer\ReturnNotation\NoUselessReturnFixer;
 use PhpCsFixer\Fixer\Semicolon\MultilineWhitespaceBeforeSemicolonsFixer;
-use PhpCsFixer\Fixer\Operator\ConcatSpaceFixer;
+use PhpCsFixer\Fixer\Whitespace\BlankLineBeforeStatementFixer;
+use Symplify\EasyCodingStandard\Config\ECSConfig;
 
 $header = <<<EOF
 This file is part of contao-garage/contao-global-elements.
@@ -42,8 +42,8 @@ return ECSConfig::configure()
     ]])
     ->withConfiguredRule(MultilineWhitespaceBeforeSemicolonsFixer::class, ['strategy' => 'new_line_for_chained_calls'])
     ->withRules(
-        [NotOperatorWithSuccessorSpaceFixer::class],
         [ConcatSpaceFixer::class],
+        [NotOperatorWithSuccessorSpaceFixer::class],
         [NoUselessReturnFixerTest::class],
         [NoWhitespaceBeforeCommaInArrayFixerTest::class],
         [PhpdocAddMissingParamAnnotationFixer::class],
