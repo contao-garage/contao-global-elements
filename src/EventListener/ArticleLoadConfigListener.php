@@ -31,9 +31,9 @@ class ArticleLoadConfigListener
     public function onLoadConfig(DataContainer|null $dc = null): void
     {
         if (
-            'global_elements' === $this->requestStack->getCurrentRequest()->query->get('be_mod')
-            && $this->requestStack->getCurrentRequest()->query->get('filter')
-            && $this->requestStack->getCurrentRequest()->query->get('cid')
+            'global_elements' === $this->requestStack->getCurrentRequest()?->query->get('be_mod')
+            && $this->requestStack->getCurrentRequest()?->query->get('filter')
+            && $this->requestStack->getCurrentRequest()?->query->get('cid')
         ) {
             // Do not show any operation buttons
             $GLOBALS['TL_DCA']['tl_article']['list']['sorting']['panelLayout'] = '';
@@ -45,7 +45,7 @@ class ArticleLoadConfigListener
                 $queryBuilder
                     ->select('*')
                     ->from('tl_content')
-                    ->andWhere('cteAlias = '.$this->requestStack->getCurrentRequest()->query->get('cid'))
+                    ->andWhere('cteAlias = '.$this->requestStack->getCurrentRequest()?->query->get('cid'))
                 ;
 
                 $query = 'CREATE TEMPORARY TABLE tl_content '.$queryBuilder->getSQL();

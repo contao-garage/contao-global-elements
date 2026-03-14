@@ -31,9 +31,9 @@ class KernelRequestListener
         }
 
         if (
-            'global_elements' === $this->requestStack->getCurrentRequest()->query->get('be_mod')
-            && $this->requestStack->getCurrentRequest()->query->get('filter')
-            && $this->requestStack->getCurrentRequest()->query->get('cid')
+            'global_elements' === $this->requestStack->getCurrentRequest()?->query->get('be_mod')
+            && $this->requestStack->getCurrentRequest()?->query->get('filter')
+            && $this->requestStack->getCurrentRequest()?->query->get('cid')
         ) {
             $sessionBag = $this->requestStack->getSession()->getBag('contao_backend');
             $data = $sessionBag->all();
