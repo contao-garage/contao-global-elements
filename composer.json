@@ -15,7 +15,7 @@
         "contao/core-bundle": "^5.3"
     },
     "conflict": {
-       "contao/core-bundle": ">5.5 || <5.7.4"
+       "contao/core-bundle": ">5.5 <5.7.4"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
