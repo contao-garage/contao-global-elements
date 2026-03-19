@@ -14,6 +14,9 @@
         "php": "^8.2",
         "contao/core-bundle": "^5.3"
     },
+    "conflict": {
+       "contao/core-bundle": ">5.5 || <5.7.4"
+    },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
         "contao/easy-coding-standard": "^5.0",
