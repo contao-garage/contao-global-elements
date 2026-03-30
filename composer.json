@@ -2,6 +2,11 @@
     "name": "contao-garage/contao-global-elements",
     "description": "Contao 5 CMS module for managed-edition",
     "type": "contao-bundle",
+    "keywords": ["contao bundle", "content organization"],
+    "support": {
+        "issues": "https://github.com/contao-garage/contao-global-elements/issues",
+        "source": "https://github.com/contao-garage/contao-global-elements"
+    },
     "homepage": "https://contao-garage.de",
     "license": "MIT",
     "authors": [
