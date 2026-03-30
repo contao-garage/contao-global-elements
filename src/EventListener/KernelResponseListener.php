@@ -29,7 +29,7 @@ class KernelResponseListener
 
     public function onKernelResponse(ResponseEvent $event): void
     {
-        if (! $this->scopeMatcher->isBackendRequest($this->request)) {
+        if (!$this->scopeMatcher->isBackendRequest($this->request)) {
             return;
         }
 
