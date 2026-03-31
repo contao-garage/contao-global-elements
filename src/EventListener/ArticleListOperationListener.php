@@ -34,7 +34,7 @@ class ArticleListOperationListener
             && $this->request->query->get('filter')
             && $this->request->query->get('popup')
             && $this->request->query->get('cid')
-            && ! $this->request->query->get('id')
+            && !$this->request->query->get('id')
         ) {
             $operation->disable();
         }
