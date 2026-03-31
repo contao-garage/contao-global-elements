@@ -2,6 +2,9 @@
 composer.lock
 /vendor/
 
+# Cache files
+.phpunit.result.cache
+
 # Log files
 *.log
 

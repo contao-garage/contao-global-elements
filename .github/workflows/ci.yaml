@@ -45,3 +45,20 @@ jobs:
             - name: Run ECS
               run: vendor/bin/ecs check --no-progress-bar
 
+    tests:
+        name: Unit Tests
+        runs-on: ubuntu-latest
+        steps:
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '8.2'
+
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Install Composer dependencies
+              uses: composer install --prefer-dist --no-progress
+
+            - name: Run the unit tests
+              run: vendor/bin/phpunit

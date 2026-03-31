@@ -23,7 +23,7 @@
        "contao/core-bundle": ">5.5 <5.7.4"
     },
     "require-dev": {
-        "contao/test-case": "^5.3",
+        "contao/test-case": "^5.4",
         "contao/easy-coding-standard": "^6.13",
         "contao/rector": "^1.3"
     },
