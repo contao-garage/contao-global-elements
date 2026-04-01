@@ -13,7 +13,6 @@ services:
         tags:
             - { name: contao.callback, table: tl_article, target: config.onload, method: onLoadConfig }
 
-    # approved
     contao_garage.global_elements.listener.article_list_operation:
         class: ContaoGarage\GlobalElements\EventListener\ArticleListOperationListener
         public: true;
