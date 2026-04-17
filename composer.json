@@ -1,6 +1,6 @@
 {
     "name": "contao-garage/contao-global-elements",
-    "description": "Contao 5 CMS module for managed-edition",
+    "description": "Contao 5 CMS module providing a backend module to help organizing numerously reused content elements outside the page and article tree.",
     "type": "contao-bundle",
     "keywords": ["contao bundle", "content organization"],
     "support": {
