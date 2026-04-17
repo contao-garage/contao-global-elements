@@ -1,5 +1,9 @@
-# contao-garage/contao-global-elements
+<p align="center">
+<a href="https://github.com/contao-garage/contao-global-elements/actions"><img src="https://github.com/contao-garage/contao-global-elements/actions/workflows/ci.yaml/badge.svg" alt></a>
+<a href="https://packagist.org/packages/contao-garage/contao-global-elements"><img src="https://img.shields.io/packagist/v/contao-garage/contao-global-elements.svg" alt></a>
+</p>
 
+# contao-garage/contao-global-elements
 
 Contao bundle providing a backend module to help organizing numerously reused content elements like contact boxes, announcements, author boxes etc.
 
